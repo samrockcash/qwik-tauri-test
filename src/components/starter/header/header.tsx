@@ -42,7 +42,7 @@ export default component$(() => {
                 <button
           // reload
           onClick$={() => {
-            nav("/demo");
+            nav("/demo/flower/");
           }}
 
           //
