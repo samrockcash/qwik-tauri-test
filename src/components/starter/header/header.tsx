@@ -1,8 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { QwikLogo } from "../icons/qwik";
 import styles from "./header.module.css";
+import { useNavigate } from "@builder.io/qwik-city";
 
 export default component$(() => {
+  const nav = useNavigate();
   return (
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
@@ -37,6 +39,14 @@ export default component$(() => {
             </a>
           </li>
         </ul>
+                <button
+          // reload
+          onClick$={() => {
+            nav("/demo");
+          }}
+
+          //
+          > TEST ROUTE</button>
       </div>
     </header>
   );
